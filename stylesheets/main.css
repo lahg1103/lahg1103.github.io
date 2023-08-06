@@ -1,0 +1,212 @@
+/* fonts */
+@font-face {
+    font-family: DMSans;
+    src: url(/fonts/DMSans-VariableFont_opszwght.ttf);
+}
+@font-face {
+    font-family: outfit;
+    src: url(/fonts/Outfit-VariableFont_wght.ttf);
+}
+
+/* root */
+:root {
+    --soft-grey: #1111112b;
+    --translucent-grey: rgba(0,0,0,0.5);
+
+    --orangesky: #d28b69;
+    --orangeblaze: #B55C2F;
+    --sunglaze: #D6C474;
+    --sunset: #E2B256;
+    --blossom: #c198a4;
+    --saturated-blossom: #ffc8d9;
+    --saturated-orange: #ffb592;
+    --saturated-skytea: #9cc8ff;
+    --skycloud: #CCCED1;
+    --skytea: #7899c1;
+    --skydusk: #3D5D87;
+
+    --autumnal-waterfall: linear-gradient(217deg, rgba(255, 200, 217, 0.65), rgba(195, 59, 52, 0) 70.71%),
+    linear-gradient(127deg, rgb(156, 200, 255, 0.65), rgba(226, 100, 73, 0) 70.71%),
+    linear-gradient(336deg, rgb(255, 181, 146, 0.65), rgba(255, 179, 102, 0) 70.71%);
+
+
+    /* Primary Colors */
+  --coconut-color: #F5F5DC; /* Beige */
+  --milk-color: #FAFAFA; /* White */
+  --matcha-color: #8DB26B; /* Green */
+  --matcha-concentrate: #3b6a05; /* Darker Green */
+  --froth-color: #F0E68C; /* Khaki */
+
+  /* Accent Colors */
+  --ceremony: #ff5b8c; /* Rose */
+  --japan: #F39200; /* Orange */
+  --whisk: #E0B600; /* Yellow */
+  --bamboo: #739E83; /* Green */
+  --caffeine: #5B2C6F; /* Purple */
+  --chanoyu: hsl(216, 100%, 50%); /* Cerulean Blue */
+
+    --matcha-latte: linear-gradient(217deg, rgba(174, 214, 144, 0.8), rgba(174, 214, 144, 0) 70.71%),
+    linear-gradient(127deg, rgba(126, 211, 33, 0.8), rgba(126, 211, 33, 0) 70.71%),
+    linear-gradient(336deg, rgba(144, 196, 164, 0.8), rgba(144, 196, 164, 0) 70.71%);
+    --ceramic-bowl: linear-gradient(180deg, #f1fcc2 5%, #F5F5DC 15%, #00A7E1 100%);
+
+
+    --coconut: #33100a;
+
+    --cloud: linear-gradient(#fdfdfd, #f5f2f0);
+    --fluff: #fdfdfd;
+    --coal: #1b151b;
+    
+
+    font-family: 'outfit', sans-serif;
+}
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    box-sizing: border-box;
+    color: var(--coal);
+    font-style: normal;
+    line-height: 1.2;
+    font-weight: 350;
+    font-size: 1.2rem;
+    min-height: 100vh;
+    background-attachment: fixed;
+    background-color: var(--fluff);
+    background: var(--cloud);
+    scroll-behavior: smooth;
+}
+
+/* general */
+nav {
+    width: 100%;
+}
+ul {
+    list-style: none;
+  }
+a, a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+hr {
+    border: 0;
+    border-top: 1px solid var(--soft-grey);
+    margin-top: 0.45rem;
+    margin-bottom: 0.45rem;
+}
+h1 {
+    font-weight: 600;
+}
+h2 {
+    font-weight: 550;
+}
+h3 {
+    font-weight: 500;
+}
+nav h1 span {
+    color: var(--chanoyu);
+}
+button {
+    background-color: transparent;
+    border: none;
+}
+
+/* class */
+.blue-border {
+    border: 1px solid rgba(0,0,0,0.25);
+}
+.video {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+  }
+.emoji {
+    font-size: 2rem;
+}
+
+.center-text {
+    text-align: center;
+}
+.soft-grey {
+    color: var(--soft-grey);
+}
+.translucent-grey {
+    color: var(--translucent-grey);
+}
+.rounded-corner {
+    border-radius: 12px;
+}
+.circle-corner {
+    border-radius: 100%;
+}
+.accent-font1 {
+    font-family: DMSans;
+}
+.container-flex {
+    display: inline-flex;
+}
+.container-flex h1 {
+    align-self: center;
+    margin-left: 1.5rem;
+}
+.container-nav-greeting {
+    display: flex;
+    flex-direction: column;
+    background: var(--autumnal-waterfall);
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.container-nav-greeting article {
+    flex-grow: 1;
+    margin: 2rem auto;
+}
+.container-nav-greeting nav {
+    position: absolute;
+    top: 0;
+    margin-bottom: 2rem;
+}
+.container-nav-greeting button {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-bottom: 1rem;
+}
+.nav-main ul {
+    margin-left: auto;
+}
+.nav-main ul a {
+    display: inline-block;
+    margin: 0rem 0.5rem 0rem 0.5rem;
+}
+.nav-main ul a:last-child {
+    margin-left: 0.5rem;
+}
+.nav-main ul a:hover {
+    color: var(--ceremony);
+}
+
+.nav-main {
+    display: inline-flex;
+}
+.greeting-section {
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+
+/* id */
+
+#scroll-to-project{
+    font-size: 4rem;
+    font-weight: 500;
+    cursor: pointer;
+    
+}
+#scroll-to-project:hover {
+    color: var(--fluff);
+}
+#projects-section {
+    margin-top: 2rem;
+    min-height: 100vh;
+}
