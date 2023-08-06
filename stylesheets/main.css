@@ -1,11 +1,11 @@
 /* fonts */
 @font-face {
     font-family: DMSans;
-    src: url(fonts/DMSans-VariableFont_opszwght.ttf);
+    src: url(./fonts/DMSans-VariableFont_opszwght.ttf);
 }
 @font-face {
     font-family: outfit;
-    src: url(fonts/Outfit-VariableFont_wght.ttf);
+    src: url(./fonts/Outfit-VariableFont_wght.ttf);
 }
 
 /* root */
