@@ -183,14 +183,16 @@ button:active {
 }
 #projects-section {
     background-color: rgba(255, 181, 146, 0.55);
-    padding-top: 2rem;
+    padding-top: 0.8rem;
     min-height: 100vh;
 }
 #projects-section h2 {
     margin: 2rem 0.5rem;
 }
 #projects-section article {
-    margin: 1.45rem 0.5rem;
+    margin-top: 0.5rem;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
 }
 #projects-section article h3 {
     margin: 1.15rem 0rem;
@@ -218,13 +220,50 @@ button:active {
     flex-grow: 2;
     white-space: nowrap;
     margin-right: 0.5rem;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    margin: 0;
 }
 #about-me article ul li {
-    display: inline-block;
+    max-width: 33.33%;
+    position: relative;
+    padding-bottom: 133.33%;
+    flex: 1;
+}
+#about-me article ul li img {
+    width: 100%;
+    height: auto;
+    /* padding-bottom: 133.33%; */
+    object-fit: cover;
 }
 .responsive{
-    max-width: 100%;
-    object-fit: cover;
+    aspect-ratio: 3/4;
     object-position: bottom;
-    height: auto;
+}
+.container-flex-col {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+@media only screen and (max-height: 383px) {
+    body {
+        font-size: 0.9rem;
+    }
+    #headshot {
+        width: 100px;
+    }
+    #scroll-to-project {
+        font-size: 1.45rem;
+    }
+}
+@media only screen and (min-height: 383px) and (max-height: 525px) {
+    body {
+        font-size: 1rem;
+    }
+    #scroll-to-project {
+        font-size: 2rem;
+    }
 }
