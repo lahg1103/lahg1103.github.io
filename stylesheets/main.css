@@ -13,45 +13,17 @@
     --soft-grey: #1111112b;
     --translucent-grey: rgba(0,0,0,0.5);
 
-    --orangesky: #d28b69;
-    --orangeblaze: #B55C2F;
-    --sunglaze: #D6C474;
-    --sunset: #E2B256;
-    --blossom: #c198a4;
     --saturated-blossom: #ffc8d9;
     --saturated-orange: #ffb592;
     --saturated-skytea: #9cc8ff;
-    --skycloud: #CCCED1;
-    --skytea: #7899c1;
-    --skydusk: #3D5D87;
 
     --autumnal-waterfall: linear-gradient(217deg, rgba(255, 200, 217, 0.65), rgba(195, 59, 52, 0) 70.71%),
     linear-gradient(127deg, rgb(156, 200, 255, 0.65), rgba(226, 100, 73, 0) 70.71%),
     linear-gradient(336deg, rgb(255, 181, 146, 0.65), rgba(255, 179, 102, 0) 70.71%);
 
-
-    /* Primary Colors */
-  --coconut-color: #F5F5DC; /* Beige */
-  --milk-color: #FAFAFA; /* White */
-  --matcha-color: #8DB26B; /* Green */
-  --matcha-concentrate: #3b6a05; /* Darker Green */
-  --froth-color: #F0E68C; /* Khaki */
-
   /* Accent Colors */
   --ceremony: #ff5b8c; /* Rose */
-  --japan: #F39200; /* Orange */
-  --whisk: #E0B600; /* Yellow */
-  --bamboo: #739E83; /* Green */
-  --caffeine: #5B2C6F; /* Purple */
   --chanoyu: hsl(216, 100%, 50%); /* Cerulean Blue */
-
-    --matcha-latte: linear-gradient(217deg, rgba(174, 214, 144, 0.8), rgba(174, 214, 144, 0) 70.71%),
-    linear-gradient(127deg, rgba(126, 211, 33, 0.8), rgba(126, 211, 33, 0) 70.71%),
-    linear-gradient(336deg, rgba(144, 196, 164, 0.8), rgba(144, 196, 164, 0) 70.71%);
-    --ceramic-bowl: linear-gradient(180deg, #f1fcc2 5%, #F5F5DC 15%, #00A7E1 100%);
-
-
-    --coconut: #33100a;
 
     --cloud: linear-gradient(#fdfdfd, #f5f2f0);
     --fluff: #fdfdfd;
@@ -68,7 +40,7 @@ body {
     box-sizing: border-box;
     color: var(--coal);
     font-style: normal;
-    line-height: 1.2;
+    line-height: 1.35;
     font-weight: 350;
     font-size: 1.2rem;
     min-height: 100vh;
@@ -76,6 +48,7 @@ body {
     background-color: var(--fluff);
     background: var(--cloud);
     scroll-behavior: smooth;
+    letter-spacing: 0.011111111111111112rem;
 }
 
 /* general */
@@ -85,7 +58,7 @@ nav {
 ul {
     list-style: none;
   }
-a, a:visited {
+a, a:visited, a:active {
     text-decoration: none;
     color: inherit;
 }
@@ -111,8 +84,14 @@ button {
     background-color: transparent;
     border: none;
 }
+button:active {
+    color: inherit;
+}
 
 /* class */
+.accent1:hover {
+    color: var(--ceremony);
+}
 .blue-border {
     border: 1px solid rgba(0,0,0,0.25);
 }
@@ -182,10 +161,6 @@ button {
 .nav-main ul a:last-child {
     margin-left: 0.5rem;
 }
-.nav-main ul a:hover {
-    color: var(--ceremony);
-}
-
 .nav-main {
     display: inline-flex;
 }
@@ -207,9 +182,49 @@ button {
     color: var(--fluff);
 }
 #projects-section {
-    margin-top: 2rem;
+    background-color: rgba(255, 181, 146, 0.55);
+    padding-top: 2rem;
     min-height: 100vh;
 }
+#projects-section h2 {
+    margin: 2rem 0.5rem;
+}
+#projects-section article {
+    margin: 1.45rem 0.5rem;
+}
+#projects-section article h3 {
+    margin: 1.15rem 0rem;
+}
 #about-me {
-    background-color: var(--saturated-blossom);
+    background-color: rgba(255, 200, 217, 0.55);
+    min-height: 100vh;
+    padding-top: 3.25rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: stretch;
+}
+#about-me article {
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+    flex-shrink: 3;
+}
+#about-me article h2 {
+    margin-bottom: 2rem;
+}
+#about-me ul {
+    font-style: italic;
+    font-family: "DMSans";
+    flex-grow: 2;
+    white-space: nowrap;
+    margin-right: 0.5rem;
+}
+#about-me article ul li {
+    display: inline-block;
+}
+.responsive{
+    max-width: 100%;
+    object-fit: cover;
+    object-position: bottom;
+    height: auto;
 }
