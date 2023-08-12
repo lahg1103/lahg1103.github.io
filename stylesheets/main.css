@@ -36,6 +36,9 @@
     padding: 0;
     margin: 0;
 }
+html {
+    background-color: var(--saturated-blossom);
+}
 body {
     box-sizing: border-box;
     color: var(--coal);
@@ -45,7 +48,7 @@ body {
     font-size: 1.2rem;
     min-height: 100vh;
     background-attachment: fixed;
-    background-color: var(--fluff);
+    
     background: var(--cloud);
     scroll-behavior: smooth;
     letter-spacing: 0.011111111111111112rem;
@@ -183,7 +186,7 @@ button:active {
 }
 #projects-section {
     background-color: rgba(255, 181, 146, 0.55);
-    padding-top: 0.8rem;
+    padding-top: 0.5rem;
     min-height: 100vh;
 }
 #projects-section h2 {
@@ -220,6 +223,10 @@ button:active {
     flex-grow: 2;
     white-space: nowrap;
     margin-right: 0.5rem;
+    
+}
+.image-list-horizontal {
+    display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-evenly;
@@ -227,9 +234,8 @@ button:active {
 }
 #about-me article ul li {
     max-width: 33.33%;
-    position: relative;
-    padding-bottom: 133.33%;
-    flex: 1;
+    margin: 0;
+    margin-bottom: 0.5rem;
 }
 #about-me article ul li img {
     width: 100%;
