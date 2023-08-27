@@ -71,6 +71,10 @@ nav {
     width: 100%;
     overflow: auto;
 }
+footer {
+    position: absolute;
+    top:0;
+}
 ul {
     list-style: none;
   }
@@ -116,4 +120,7 @@ button:active {
 }
 .translucent-grey {
     color: var(--translucent-grey);
+}
+.inline a {
+    display: inline-block;
 }
