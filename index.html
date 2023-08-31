@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="stylesheets/main.css">
     </head>
     <body>
-        <div id="landing" class="full-height flex">
+        <div id="landing" class="full-height flex-col">
         <nav class="navigator">
             <!-- nav links within page -->
             <ul class="inline">
@@ -46,6 +46,16 @@
         <footer>
             <p class="center-text"> 2023 <span class="translucent-grey">&copy;</span> Leslie A. Hurtado</p>
         </footer>
+        <svg style="display: none">
+            <filter id='noiseFilter'>
+              <feTurbulence 
+                type='fractalNoise' 
+                baseFrequency='6.29' 
+                numOctaves='6' 
+                stitchTiles='stitch'
+              />
+            </filter>
+          </svg>
         <script src="scripts/script.js"></script>
     </body>
 </html>
