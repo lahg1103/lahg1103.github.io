@@ -19,7 +19,7 @@
     --marshmallow : #f1f1f1;
     --coal : #1B181b;
     --slate-grey: #516682;
-    --splash: conic-gradient(from 45deg at 50% 50%, rgba(241, 241, 241, 0.99) 0.035999999090563506deg, #FFF 0.07199999818112701deg, #DADADA 89.65063691139221deg, rgba(241, 241, 241, 0.95) 179.82038855552673deg, #D9D9D9 270.5304980278015deg, #FDFDFD 360deg);
+    --splash: conic-gradient(from 45deg at 50% 50%, rgba(241, 241, 241, 0.99) 0.035999999090563506deg, #FFF 0.07199999818112701deg, #ACACAC 89.65063691139221deg, rgba(241, 241, 241, 0.95) 179.82038855552673deg, #BFBFBF 270.5304980278015deg, #FDFDFD 360deg);
     font-family: 'outfit-light', sans-serif;
     font-size: 12px;
     font-weight: 300;
@@ -77,10 +77,7 @@ a, a:visited, a:active {
 
 #landing {
     position: relative;
-
     height: 100vh;
-    background-color: var(--marshmallow);
-    background: var(--splash);
     display: grid;
 
     grid-template-columns: 0.5fr 0.5fr 1fr 1fr 1fr 1fr 0.2fr 0.5fr;
@@ -105,10 +102,11 @@ a, a:visited, a:active {
     left: 0;
     width: 100%;
     height: 100%;
-    opacity: 30%;
+    z-index: -1;
     mix-blend-mode: multiply;
 }
 #landing::before {
+    opacity: 40%;
     background-color: #000;
     filter: url(#grainy);
 }
@@ -183,7 +181,81 @@ a, a:visited, a:active {
     flex-direction: column;
 }
 
+#work {
+    height: 100vh;
+} 
 
-#body-content > * {
+#about {
+    height: 100vh;
+    position: relative;
+    background-color: var(--marshmallow);
+    padding: 1rem;
+    overflow: hidden;
+
+    display: grid;
+
+    grid-template-columns: 0.3fr 1fr 1fr 1fr 1fr 0.3fr;
+    grid-template-rows: 0.3fr 1fr 1fr 1fr 1fr 0.3fr;
+
+    grid-template-areas: 
+        ". . . . . . "
+        ". about-graphic . about-header about-header about-header"
+        ". about-graphic . about-text about-text ."
+        ". about-caption . about-divisor about-divisor ."
+        ". . . about-subtext about-image ."
+        ". . . . . .";
+}
+.about-header {
+    grid-area: about-header;
+}
+.about-image {
+    grid-area: about-image;
+    width: 9rem;
+}
+.about-graphic {
+    grid-area: about-graphic;
+}
+.about-caption {
+    grid-area: about-caption;
+}
+.about-divisor {
+    grid-area: about-divisor;
+    width: 100%;
+    background-color: var(--coal);
+    height: 20%;
+}
+.about-text {
+    grid-area: about-text;
+}
+.about-graphic {
+    grid-area: about-graphic;
+    width: 9rem;
+    position: relative;
+}
+.about-graphic img {
+    max-width: 100%;
+}
+.about-graphic svg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    width: 9rem;
+    height: auto;
+}
+.spin {
+    animation:  spin 18s linear infinite;
+}
+.about-subtext {
+    grid-area: about-subtext;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#contact {
     height: 100vh;
 }
