@@ -1,0 +1,231 @@
+/* typography */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200;300&family=Source+Sans+3:ital,wght@0,400;0,700;1,400;1,700&family=Space+Grotesk:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&family=Slackside+One&family=UnifrakturMaguntia&display=swap');
+@font-face {
+    font-family: 'hero';
+    src: url('/lahg1103.github.io/fonts/Recoleta-RegularDEMO.otf') format("opentype");
+}
+/* generic */
+:root {
+    --hero-font-size : 4.43rem;
+    --header-font-size : 3rem;
+    --subtitle-font-size : 18px;
+    --body-font-size : 1.1rem;
+    --spacing-outer: 2.15rem;
+    --spacing-inner: 1.75rem;
+    --soft-black: #1a1a1a;
+    --soft-grey: #fffffe;
+    --soft-light-grey: #fffaf8;
+    --matcha: rgb(0, 115, 80);
+    --accent-font: 'Space Grotesk', sans-serif;
+    --subtitle-font: 'IBM Plex Mono', monospace;
+}
+body {
+    color: var(--soft-black);
+    background-color: var(--soft-black);
+    font-family: 'source sans 3', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: var(--body-font-size);
+    letter-spacing: 0.07em;
+}
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.subtitle {
+    font-family: var(--subtitle-font);
+    font-size: var(--subtitle-font-size);
+}
+a, a:visited, a:active {
+    color: inherit;
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+h3 {
+    letter-spacing: 0.04em;
+}
+button {
+    background-color: transparent;
+    border: none;
+    font-size: var(--body-font-size);
+    cursor: pointer;
+    letter-spacing: 0.04em;
+}
+.page-wrapper {
+    border-radius: 12px;
+    margin: var(--spacing-outer);
+    background-color: var(--soft-grey);
+    overflow: hidden;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    margin: var(--spacing-inner);
+}
+nav ul {
+    display: inline-flex;
+    gap: 8px;
+}
+main {
+    margin: 0 var(--spacing-inner);
+}
+main > section {
+    height: 100%;
+}
+footer {
+    text-align: center;
+    margin: var(--spacing-inner);
+}
+.tech {
+    border: 1px solid var(--soft-black);
+    padding: 0.25rem 0.5rem;
+    width: 115px;
+    border-radius: 3rem;
+}
+.tech.active {
+    color: var(--soft-light-grey);
+    background-color: var(--matcha);
+}
+.stack {
+    display: flex;
+    justify-content: space-evenly;
+}
+.project {
+    margin: var(--spacing-inner);
+    border-bottom: 2px solid var(--soft-black);
+    cursor: default;
+}
+.project:first-of-type {
+    border-top: 2px solid var(--soft-black);
+}
+.project > div {
+    margin: var(--spacing-inner) 0 0 0;
+}
+.project-title {
+    display: flex;
+    justify-content: space-between;
+}
+.box {
+    border: 1px solid var(--soft-black);
+    padding: 0.25rem 0.5rem;
+    width: 90px;
+    letter-spacing: 0.350px;
+    transform: translateY(-0.25rem);
+    background-color: var(--matcha);
+    color: var(--soft-light-grey);
+    text-align: center;
+}
+.box:hover {
+    font-weight: bold;
+    letter-spacing: 0;
+    cursor: pointer;
+}
+.highlight {
+    position: relative;
+}
+.highlight:after {
+    content: '';
+    width: 100%;
+    height: 6px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--matcha);
+}
+.nav-link {
+    position: relative;
+}
+.nav-link:after {
+    content: '';
+    width: 0px;
+    height: 2px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--soft-light-grey);
+    transition: 300ms;
+    
+}
+.nav-link:hover:after {
+    width: 100%;
+}
+.nav-link:not(:hover):after {
+    right: 0;
+    left: auto;
+}
+.nav-link-container {
+    display: inline-flex;
+    gap: 8px;
+}
+.logo {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+.hero {
+    font-family: "new-spirit", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: var(--hero-font-size);
+}
+.accent {
+    font-family: var(--accent-font);
+}
+.circle {
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    min-width: 235px;
+    width: 45%;
+    max-width: 300px;
+    display: flex;
+    align-items:end;
+    background-color: transparent;
+    background: radial-gradient(circle, var(--matcha) 0%, rgba(55, 233, 11, 0) 70%);
+}
+.circle img {
+    width: 100%;
+    transform: translateX(5%);
+}
+#landing {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: var(--spacing-inner);
+}
+#landing article {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: calc(var(--spacing-inner) * 1.5) 0;
+}
+article > p {
+    margin: 1rem 0;
+}
+.hide {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+  .grey {
+    color: #999;
+  }
+  .upper {
+    text-transform: uppercase;
+  }
+  #projects > h1 {
+    margin: 1rem 0;
+  }
+
+  @media screen and (min-width: 1010px) {
+    :root {
+        --spacing-inner: 3rem;
+    }
+  } 
+  

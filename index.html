@@ -1,94 +1,75 @@
 <!DOCTYPE html>
-<!-- Website design and programming done by Leslie A. Hurtado -->
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Leslie A. Hurtado Design</title>
-        <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-        <link rel="stylesheet" href="stylesheets/main.css">
-        
-    </head>
-    <body>
-        <div id="nav-greeting" class="container-nav-greeting">
-        <nav class="nav-main">
-            <h1>Leslie Hurtado <span class="accent-font1">Design</span></h1>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Leslie Hurtado</title>
+    
+    <link rel="stylesheet" href="https://use.typekit.net/fdn2awi.css">
+    <link rel="stylesheet" href="styles/main.css">
+    
+</head>
+<body>
+    <div class="page-wrapper"><header>
+        <div>
+            <h1 class="logo">Hurtado Design</h1>
+        </div>
+        <nav>
             <ul>
-                <a title="LinkedIn Leslie Hurtado" href="https://www.linkedin.com/in/lesliehurtado1103/" class="accent1"><li>LinkedIn</li></a>
-                <a title="GitHub Leslie Hurtado" href="https://www.github.com/lahg1103" class="accent1"><li>GitHub</li></a>
-                <a title="Portfolio Leslie Hurtado" href="https://www.behance.net/lesliehurtado1" class="accent1"><li>Portfolio</li></a>
+                <li><a href="#work" class="nav-link">work</a></li>
+                <li><a href="#projects" class="nav-link">projects</a></li>
+                <li><a href="#about" class="nav-link">about</a></li> 
             </ul>
         </nav>
-
-
-        <section id="page-content">
-
-            <article class="greeting-section">
-                <div class="container-flex">
+        <div class="box"><a href="#contact">contact</a></div>
+    </header>
+        
+        <main>
+            <section id="landing">
+                
+                <article>
                     
-                    <img alt="An upclose bust headshot of author Leslie Hurtado giving a toothy smile, looking straight at the camera, against an off-white textured background. She is wearing a red-orange ribbed shirt." src="/images/headshot.png" width="200" class="circle-corner blue-border" id="headshot">
-                    <h1>Virtual Designer &#8212; <span class="accent-font1">based in the Rio Grande Valley, TX <span class="emoji">&#127796;</span></span></h1>
-                </div>
-                <hr>
-                <h2>Heya there, I'm Leslie!</h2>
-                <p>Thank you for visiting my page. Currently a <span id="age">20</span> year old, fulltime student studying Computer Science at the University of Texas Rio Grande Valley. As a partime position, I am a web developer for the Office for Sustainability &colon;&rpar;</p>
-                
-            </article>
-            <button id="scroll-to-project">v</button>
-        </div>
-
-            <section id="projects-section">
-                <h2>Latest Projects</h2>
-                <article>
-                    <h3>Hangman made using Ruby Sinatra</h3>
-                    <p>Simple and clean Hangman game made by using Ruby's Sinatra framework and HTML, and Bootstrap for clean styling. Deployed using Render, for software engineering I. Might take a while to load, apologies for the inconvenience.
-                    <a title="Hangman Sinatra" href="http://sinatra-hangman.onrender.com" class="project-link accent1"><strong>Take me to the project</strong></a></p>
-                </article>
-                <article>
-                    <h3>Last Crusade Demo : Game made using Python Flask</h3>
-                    <p>Last Crusade was a demo of a web-browser based game developed by a group of four people for Object-Oriented Programming in Python class.
-                    The game was developed using HTML canvas tag, async JavaScript, and CSS. Classes and functions for game functionality came from Python which connected to JavaScript in order to update the graphics (HTML elements).
-                    </p>
-                    <!-- youtube video -->
-                    <iframe class="video" width="510" height="287" src="https://www.youtube.com/embed/KTyDjtI_bak" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <div class="circle"><img src="images/headshot-OFS-clean.png" alt="" width="150"></div>
+                    <div>
+                        <p class="subtitle">Web <span class="">Developer</span></p>
+                        <h3 class="hero">Leslie Hurtado</h3>
+                        <h3>Engineering design solutions that are </h3>
+                        <div class="changing-text-wrapper"><h3><span class="highlight accent typewrite" data-timing="2000" data-descriptors='["sustainable", "responsive", "accessible", "lightweight"]'><span class="wrap"></span></span></h3></div>
+                    </div>  
                 </article>
             </section>
-
-            <section id="about-me">
-            <article class="container-flex-col">
-                <h2>Let's Formally Introduce Ourselves..</h2>
-                <ul class="image-list-horizontal">
-                    <li><img src="images/border-winter-selfie.jpg" class="responsive" ></li>
-                    <li><img src="images/dinner-looking.jpg" class="responsive"></li>
-                    <li><img src="images/makeup-selfie.jpg" class="responsive"></li>
-                </ul>
-                <p>The name is Leslie Alejandra Hurtado Garcia. 
-                I am a first generation American and college student originating from Mexico's frontier state Tamaulipas where I call home.
-                Aspiring UX/UI designer or front-end developer with a curiosity for game development.
-                I specialize in web development and design, creating responsive, accessible, and beautiful products.
-                </p>
-                <p>In my free time I am an artist, avid reader, cyclist, and the eldest of three sisters.
-                    Sometimes I try my hand at writing, dabble with fabric arts, and do expressive makeup whenever the inspiration strikes. Mostly, you'll find me creating captivating portraits in whatever medium I can get my hands on.
-                </p>
-            </article>
-            <ul>
-                <li>self-starting</li>
-                <li>creative</li>
-                <li>problem solver</li>
-            </ul>
+            <section id="work"></section>
+            <section id="projects">
+                <h1>Projects</h1>
+                <div class="stack-wrapper"><ul class="stack">
+                    <li><button id="showall" class="tech active">Show All</button></li>
+                    <li><button id="js" class="tech">JavaScript</button></li>
+                    <li><button id="python" class="tech">Python</button></li>
+                    <li><button id="frontend" class="tech">Frontend</button></li>
+                    <li><button id="fullstack" class="tech">Fullstack</button></li>
+                </ul></div>
+                <article id="taqueria" data-stack="frontend" class="project"><div class="project-title"><h1>Taqueria Aztlan</h1><p class="subtitle upper grey">branding</p></div></article>
+                <article id="carbonflights" data-stack="python, fullstack" class="project"><div class="project-title">
+                    <h1>
+                        Carbon Flights
+                    </h1>
+                    <p class="subtitle upper grey">hackathon</p>
+                </div></article>
+                <article id="lastcrusade" data-stack="python" class="project"><h1>Last Crusade</h1></article>
+                <article id="aashe" data-stack="js, frontend" class="project"><h1>AASHE Page Redesign</h1></article>
             </section>
-
-            <section id="contact">
-            <article class="contact-section">
-                <h2>Let's Collaborate</h2>
-                
-            </article>
-            </section>
-
-        </section>
+            <section id="about"></section>
+            <section id="contact"></section>
+        </main>
+        <aside style="display:none">
+            <div>
+                <p>top</p>
+            </div>
+        </aside>
         <footer>
-            <p class="center-text"> 2023 <span class="translucent-grey">&copy;</span> Leslie A. Hurtado</p>
+            <p>2023 &copy; Powered by tea. 🍵</p>
         </footer>
-        <script src="scripts/script.js"></script>
-    </body>
+    </div>
+    <script src="scripts/script.js"></script>
+</body>
 </html>
