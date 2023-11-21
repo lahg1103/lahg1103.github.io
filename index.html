@@ -4,72 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio | Leslie Hurtado</title>
-    
+
     <link rel="stylesheet" href="https://use.typekit.net/fdn2awi.css">
-    <link rel="stylesheet" href="styles/main.css">
-    
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <div class="page-wrapper"><header>
-        <div>
-            <h1 class="logo">Hurtado Design</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#work" class="nav-link">work</a></li>
-                <li><a href="#projects" class="nav-link">projects</a></li>
-                <li><a href="#about" class="nav-link">about</a></li> 
-            </ul>
-        </nav>
-        <div class="box"><a href="#contact">contact</a></div>
+    <header>
+        <div class="logo"><img src="images/Logo.svg" alt="LH logo" width="45"></div>
+        <nav><ul>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#about">About</a></li>
+        </ul></nav>
+        <button class="contact box"><a href="#contact">Contact</a></button>
     </header>
-        
-        <main>
-            <section id="landing">
-                
-                <article>
-                    
-                    <div class="circle"><img src="images/headshot-OFS-clean.png" alt="" width="150"></div>
-                    <div>
-                        <p class="subtitle">Web <span class="">Developer</span></p>
-                        <h3 class="hero">Leslie Hurtado</h3>
-                        <h3>Engineering design solutions that are </h3>
-                        <div class="changing-text-wrapper"><h3><span class="highlight accent typewrite" data-timing="2000" data-descriptors='["sustainable", "responsive", "accessible", "lightweight"]'><span class="wrap"></span></span></h3></div>
-                    </div>  
-                </article>
-            </section>
-            <section id="work"></section>
-            <section id="projects">
-                <h1>Projects</h1>
-                <div class="stack-wrapper"><ul class="stack">
-                    <li><button id="showall" class="tech active">Show All</button></li>
-                    <li><button id="js" class="tech">JavaScript</button></li>
-                    <li><button id="python" class="tech">Python</button></li>
-                    <li><button id="frontend" class="tech">Frontend</button></li>
-                    <li><button id="fullstack" class="tech">Fullstack</button></li>
-                </ul></div>
-                <article id="taqueria" data-stack="frontend" class="project"><div class="project-title"><h1>Taqueria Aztlan</h1><p class="subtitle upper grey">branding</p></div></article>
-                <article id="carbonflights" data-stack="python, fullstack" class="project"><div class="project-title">
-                    <h1>
-                        Carbon Flights
-                    </h1>
-                    <p class="subtitle upper grey">hackathon</p>
-                </div></article>
-                <article id="lastcrusade" data-stack="python" class="project"><h1>Last Crusade</h1></article>
-                <article id="aashe" data-stack="js, frontend" class="project"><h1>AASHE Page Redesign</h1></article>
-            </section>
-            <section id="about"></section>
-            <section id="contact"></section>
-        </main>
-        <aside style="display:none">
-            <div>
-                <p>top</p>
+    <main>
+        <section>
+            <div class="circle-container">
+                <img src="images/headshot-ofs-clean.png" alt="Leslie Hurtado headshot pictured in formal attire smiling" class="circle-img">
+                <div class="circle">
             </div>
-        </aside>
-        <footer>
-            <p>2023 &copy; Powered by tea. 🍵</p>
-        </footer>
-    </div>
-    <script src="scripts/script.js"></script>
+        </section>
+    </main>
 </body>
 </html>

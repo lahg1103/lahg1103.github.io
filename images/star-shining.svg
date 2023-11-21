@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 60.11 60.29">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke-width: 14px;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        fill: none;
+        stroke: #fbece2;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2 {
+        stroke-width: 3px;
+      }
+
+      .cls-5 {
+        fill: url(#radial-gradient);
+      }
+
+      .cls-5, .cls-6 {
+        stroke-width: 0px;
+      }
+
+      .cls-3 {
+        stroke-width: 5px;
+      }
+
+      .cls-6 {
+        fill: #fbece2;
+      }
+    </style>
+    <radialGradient id="radial-gradient" cx="30.11" cy="30" fx="30.11" fy="30" r="25.11" gradientUnits="userSpaceOnUse">
+      <stop offset=".28" stop-color="#fcf0e8"/>
+      <stop offset=".39" stop-color="#fbefe7" stop-opacity=".99"/>
+      <stop offset=".48" stop-color="#fbefe7" stop-opacity=".94"/>
+      <stop offset=".57" stop-color="#fbefe7" stop-opacity=".87"/>
+      <stop offset=".65" stop-color="#fbefe6" stop-opacity=".77"/>
+      <stop offset=".74" stop-color="#fbeee5" stop-opacity=".65"/>
+      <stop offset=".82" stop-color="#fbede4" stop-opacity=".49"/>
+      <stop offset=".89" stop-color="#fbede3" stop-opacity=".3"/>
+      <stop offset=".97" stop-color="#fbece2" stop-opacity=".09"/>
+      <stop offset="1" stop-color="#fbece2" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g>
+      <path class="cls-6" d="m60,30.29q-30,0-30,30,0-30-30-30Q30,30.29,30,.29q0,30,30,30Z"/>
+      <line class="cls-4" x1="30.11" y1="60" x2="30.11" y2="0"/>
+      <line class="cls-4" x1=".11" y1="30" x2="60.11" y2="30"/>
+      <line class="cls-2" x1="30.11" y1="52.5" x2="30.11" y2="7.5"/>
+      <line class="cls-3" x1="30.11" y1="47.5" x2="30.11" y2="12.5"/>
+      <line class="cls-3" x1="12.61" y1="30" x2="47.61" y2="30"/>
+      <line class="cls-2" x1="7.61" y1="30" x2="52.61" y2="30"/>
+      <line class="cls-1" x1="30.11" y1="40" x2="30.11" y2="20"/>
+      <line class="cls-1" x1="20.11" y1="30" x2="40.11" y2="30"/>
+      <circle class="cls-5" cx="30.11" cy="30" r="25.11"/>
+    </g>
+  </g>
+</svg>
