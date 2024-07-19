@@ -1,0 +1,156 @@
+/* typography */
+
+@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap');
+
+body {
+    line-height: 1.4;
+    font-family: sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1.1rem;
+
+}
+html, body {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+ul { 
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+a, a:visited {
+    color: inherit;
+    text-decoration: none;
+}
+a:hover {
+    font-weight: bold;
+}
+/* layout */
+body {
+    display: grid;
+    grid-template-areas: "h h"
+                         "n m"
+                         "n f";
+    overflow-x: clip;
+}
+aside {
+    grid-area: n;
+    align-self: start;
+    position: sticky;
+    top: 0;
+    left: 0;
+    padding-left: 0.3rem;
+    margin-right: 2rem;
+}
+nav ul li {
+    margin-block: 1.3rem;
+}
+.nav-link {
+    display: inline-flex;
+    align-items: center;
+    flex-direction: column;
+}
+header {
+    grid-area: h;
+    place-self: start center;
+}
+main {
+    grid-area: m;
+    padding-right: 0.3rem;
+}
+footer{ 
+    grid-area: f;
+    place-self: end start;
+    padding-bottom: 0.3rem;
+}
+#headshot {
+    display: inline-block;
+    position: relative;
+    background-color: #000;
+}
+#headshot img {
+    width: auto;
+    max-width: 100%;
+    max-height: calc(100vh * 0.75);
+    object-fit: contain;
+    opacity: 1;
+}
+#headshot::after {
+    content: attr(data-text);
+    position: absolute;
+    bottom: 50%;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    font-size: 2rem;
+    color: white;
+    opacity: 0;
+}
+#headshot:hover img {
+    transition: opacity 700ms ease-in-out;
+    opacity: 0.85;
+}
+#headshot:not(:hover) img {
+    transition: opacity 700ms ease-in-out;
+    opacity: 1;
+}
+#headshot:hover::after {
+    transition: opacity 700ms ease-in-out;
+    opacity: 1;
+}
+#headshot:not(:hover)::after {
+    transition: opacity 700ms ease-in-out;
+    opacity: 0;
+}
+section {
+    margin-bottom: 4rem;
+}
+/* style */
+hr {
+    border: none;
+    height: 1px;
+    background-color: #ccc;
+}
+.subsection {
+    font-weight: bold;
+}
+.hashtags {
+    display: inline-flex;
+}
+.hashtags li {
+    margin-inline: 0.45rem;
+    border: 1px solid;
+    border-radius: 12px;
+    padding: 0.2rem 0.7rem;
+}
+.hashtags li:hover {
+    background-color: #7dca7b;
+    cursor: default;
+}
+.nav-link {
+    text-transform: capitalize;
+}
+header h1 {
+    display: inline-block;
+    word-spacing: 0.45rem;
+}
+#middle-initial { 
+    font-family: "Sedgwick Ave Display", cursive;
+    font-size: 2.8rem;
+    vertical-align: sub;
+    font-weight: 300;
+}
+.nav-link::after {
+    content:  attr(title);
+    height: 0;
+    visibility: hidden;
+    overflow: hidden;
+    user-select: none;
+    pointer-events: none;
+    font-weight: bold;
+}
+article img {
+    max-width: 100%;
+}

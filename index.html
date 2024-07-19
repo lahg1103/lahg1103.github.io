@@ -1,0 +1,93 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leslie Hurtado | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Leslie <span id="middle-initial">A.</span> Hurtado</h1>
+    </header>
+    <aside>
+
+        <nav>
+            <ul>
+                <li class="nav-item"><a href="#landing" class="nav-link" title="about">about</a></li>
+                
+                <hr>
+                <li class="nav-item"><a href="#code" class="nav-link" title="code">code</a></li>
+                <li class="nav-item"><a href="#art" class="nav-link" title="art">art</a></li>
+                <li class="nav-item"><a href="" class="nav-link" title="resume">resume</a></li>
+                
+                <hr>
+                <li class="nav-item"><a href="https://www.linkedin.com/in/lesliehurtado1103/" class="nav-link" title="LinkedIn">LinkedIn</a></li>
+                <li class="nav-item"><a href="https://www.github.com/lahg1103" class="nav-link" title="GitHub">GitHub</a></li>
+            </ul>
+        </nav>
+
+    </aside>
+    
+    <main>
+        <section id="landing">
+            <div id="headshot" data-text="About Me">
+                <img src="border-winter-selfie.jpg" alt="headshot of author Leslie A. Hurtado" width="600">
+            </div>
+            
+            <p id="description">
+                <strong>Web Developer </strong> based in the Rio Grande Valley of Texas with a background in fine art.
+                <br>
+                Currently attending the University of Texas Rio Grande Valley as a junior pursuing a Bachelor of Science in <strong>Computer Science</strong>.
+            </p>
+        </section>
+        <section id="code">
+            <h1>Coding Projects</h1>
+            <article id="lastcrusade">
+                <img src="titleScreenLastCrusade.png" alt="last crusade demo page screenshot">
+                <h1>Last Crusade</h1>
+                <ul class="hashtags">
+                    <li>python</li>
+                    <li>flask</li>
+                    <li>javascript</li>
+                    <li>html</li>
+                    <li>css</li>
+                </ul>
+                <p class="project-description" data-year="2022">
+                    <strong>RPG web-browser-based game</strong> inspired by Fire Emblem series made for Object Oriented Programming in Python class.
+                </p>
+                <ul>
+                    <span><strong>Tasks:</strong></span>
+                    <li>Make Spritesheets</li>
+                    <li>Code Spritesheet Animations using JavaScript</li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <p class="project-description">
+
+                </p>
+            </article>
+        </section>
+        <section id="art">
+            <h1>Art Gallery</h1>
+            <article id="graphicdesign">
+                <h1>Graphic Design</h1>
+            </article>
+            <article id="finearts">
+                <h1>Fine Arts</h1>
+            </article>
+        </section>
+    </main>
+    <footer> Leslie A. Hurtado &copy; <span class="year">20</span>.</footer>
+
+    <script>
+        window.addEventListener("DOMContentLoaded", ()=> {
+            let currentDate = new Date();
+            let currentYear = currentDate.getFullYear();
+            let year = document.querySelector(".year");
+            year.textContent = currentYear;
+        })
+    </script>
+</body>
+</html>
