@@ -1,14 +1,17 @@
 /* typography */
 
 @import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap');
-
 body {
     line-height: 1.4;
     font-family: sans-serif;
     font-weight: normal;
     font-style: normal;
     font-size: 1.1rem;
+}
 
+/* everything else */
+html {
+    scroll-behavior: smooth;
 }
 html, body {
     margin:0;
