@@ -30,7 +30,7 @@ a:hover {
 /* layout */
 body {
     display: grid;
-    grid-template-areas: "h h"
+    grid-template-areas: ". h"
                          "n m"
                          "n f";
     overflow-x: clip;
@@ -49,8 +49,8 @@ nav ul li {
 }
 .nav-link {
     display: inline-flex;
-    align-items: center;
     flex-direction: column;
+    width: 100%;
 }
 header {
     grid-area: h;
@@ -59,13 +59,21 @@ header {
 main {
     grid-area: m;
     padding-right: 0.3rem;
+    position: relative;
 }
 footer{ 
     grid-area: f;
     place-self: end start;
     padding-bottom: 0.3rem;
 }
+#landing {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+}
 #headshot {
+    align-self: center;
     display: inline-block;
     position: relative;
     background-color: #000;
@@ -87,6 +95,7 @@ footer{
     font-size: 2rem;
     color: white;
     opacity: 0;
+    text-decoration: underline;
 }
 #headshot:hover img {
     transition: opacity 700ms ease-in-out;
@@ -112,9 +121,6 @@ hr {
     border: none;
     height: 1px;
     background-color: #ccc;
-}
-.subsection {
-    font-weight: bold;
 }
 .hashtags {
     display: inline-flex;
@@ -153,4 +159,70 @@ header h1 {
 }
 article img {
     max-width: 100%;
+}
+
+#code article {
+    margin-bottom: 2.5rem;
+}
+#code article > * {
+    margin-bottom: 1rem;
+}
+
+#art {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+    grid-template-areas:
+                        "f g"
+                         "d plug";
+    height: 75vh;
+}
+
+#art article {
+    border: 1px solid #000;
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: 5fr, 1fr;
+    grid-auto-flow: row;
+}
+#art article h1 {
+    grid-row: 2;
+}
+#art article a {
+    grid-row: 1;
+    overflow: hidden;
+    position: relative;
+}
+.art-example{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+#artcontact a {
+    place-self: center;
+}
+#fineart {
+    grid-area: f;
+}
+#graphicdesign {
+    grid-area: g;
+    margin-left: -1px;
+}
+#digitalart {
+    grid-area: d;
+    margin-top: -1px;
+}
+#artcontact {
+    grid-area: plug;
+    margin-left: -1px;
+    margin-top: -1px;
+}
+/* media queries */
+@media (1000px <= width) {
+    #landing {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
 }
