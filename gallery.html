@@ -1,8 +1,115 @@
-<div id="digitalart">
-    <img src="images/TkLTS.png" alt="">
-    <img src="images/mariNorm.PNG" alt="">
-</div>
-<div id="graphicdesign">
-    <img src="images/promise.png" alt="">
-</div>
-<a href="index.html">back to home</a>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leslie Hurtado | Portfolio</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        a, a:visited, a:active {
+            color: inherit;
+        }
+        body {
+            overflow-x: hidden;
+            font-family: sans-serif;
+        }
+        div.gallery {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(10px, 1fr));
+            background-color: #000;
+        }
+        .gallery-wrapper img {
+            width: 100%;
+            place-self: center;
+            height: 100%;
+            object-fit: contain;
+        }
+        footer {
+            text-align: center;
+            margin-block: 1rem;
+        }
+        .gallery-wrapper:hover img {
+            opacity: 0.69;
+        }
+        .gallery-wrapper:not(:hover) img {
+            opacity: 1;
+        }
+        .gallery-wrapper {
+            background-color: #000;
+            position: relative;
+            transition: 400ms ease-in-out;
+        }
+        .gallery-wrapper::after {
+            content : attr(data-text);
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: auto;
+            color: white;
+            font-size: 1.2rem;
+            opacity: 0;
+            transition: 400ms ease-in-out;
+            text-align: center;
+        }
+        .gallery-wrapper:hover::after {
+            opacity: 1;
+        }
+        .gallery-wrapper:not(hover)::after {
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <h1>Leslie A. Hurtado Artwork Portfolio</h1>
+    </header>
+    <main>
+        <section id="landing">
+            <h1>Artist Statement</h1>
+            <p>Leslie A. Hurtado is a Mexican American artist from the Rio Grande Valley located in deep south Texas.
+               She aspires to push art boundaries by keeping to the usual format of portraiture through different media.
+            </p>
+        </section>
+        <section id="traditionalart">
+            <h1>Featured Traditional Works</h1>
+            <div class="gallery">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+            </div>
+        </section>
+        <section id="digitalart">
+            <h1>Featured Digital Works</h1>
+
+            <div class="gallery">
+                <div class="gallery-wrapper" data-text="Toru Kitajima from Ling Tosite Shigure">
+                    <img src="images/TkLTS.png" alt="" >
+                </div>
+                <div class="gallery-wrapper" data-text="Marianne von Edmund &copy; Nintendo and Intelligent Systems">
+                    <img src="images/mariNorm.PNG" alt="" >
+                </div>
+            </div>
+        </section>
+        <section id="graphicdesign">
+            <h1>Featured Graphic Design Works</h1>
+            <div class="gallery">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+            </div>
+        </section>
+        <a href="index.html">back to home</a>
+
+
+    </main>
+    <footer>
+        Leslie A. Hurtado &copy; 2024
+    </footer>
+    </body>
+</html>
