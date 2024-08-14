@@ -5,6 +5,7 @@
 :root {
     --transition-opacity : opacity 200ms ease-in-out;
     --padding-standard: 16px;
+    --accent-green: #7dca7b;
 }
 
 html, body {
@@ -41,6 +42,11 @@ footer {
     text-align: center;
     width: 100%;
 }
+video {
+    width: 100%;
+    max-height: 55vh;
+    margin-bottom: var(--padding-standard);
+}
 img {
     max-width: 100%;
     max-height: 45vh;
@@ -50,6 +56,7 @@ section {
     padding-inline: var(--padding-standard);
     box-sizing: border-box;
     display: grid;
+    margin-bottom: 40px;
 }
 header{
     width: 100%;
@@ -65,13 +72,19 @@ header, aside {
 header {
     top: 0;
 }
+header a {
+    text-decoration: none;
+}
 aside {
     height: 2rem;
     top: 4rem;
     display: grid;
     place-content: center;
+    z-index: 999;
 }
-
+article ul {
+    margin-bottom: var(--padding-standard);
+}
 /* ID */
 #landing {
     height: 100vh;
@@ -86,6 +99,25 @@ aside {
 .nav-list {
     display: inline-flex;
     gap: 20px;
+}
+.nav-link {
+    position: relative;
+    text-decoration: none;
+}
+.nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0%;
+    height: 3px;
+
+    background-color: var(--accent-green);
+
+    transition: width 200ms ease-in-out; 
+}
+.nav-link:hover::after {
+    width: 100%;
 }
 .special-image {
     position: relative;
@@ -119,12 +151,29 @@ h3.hero {
     font-weight: 500;
 }
 .icons-wrapper {
+    width: 100%;
     display: flex;
+    justify-content: space-around;
 }
 .icons-wrapper img {
-    max-width: 100px;
-    max-height: 300px;
+    max-width: 4rem;
+    max-height: 4rem;
 }
+.stack-list {
+    display: inline-flex;
+    gap: 1rem;
+}
+.stack-list li {
+    border: 1px solid #0fba56;
+    border-radius: 12px;
+    padding-inline: 0.5rem;
+    background: #fff;
+}
+.stack-list li:hover {
+    background-color: var(--accent-green);
+    cursor: default;
+}   
+
 @media (width > 600px) {
     body {
         display: grid;
@@ -144,7 +193,7 @@ h3.hero {
         display: flex;
         grid-area: 2/1;
         position: sticky;
-        top: 4rem;
+        top: 7.5rem;
         left: 0;
         align-self: start;
         height: auto;
