@@ -1,2 +1,61 @@
-<h1>hello world</h1>
-<p>Leslie Hurtado &copy; 2024</p>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leslie Hurtado | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>Leslie A. Hurtado Portfolio</h1>
+    </header>
+    
+    <aside>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="#about">About</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#experience">Experience</a></li>
+    
+                <li><a href="https://www.github.com/lahg1103">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/lesliehurtado1103">LinkedIn</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </aside>
+    <main>
+        <section id="landing">
+            <h2 class="hero">Fullstack Web Developer</h2>
+            <h3 class="hero">Based in the Rio Grande Valley <span class="emoji">&#127796;</span></h3>
+        </section>
+        <section id="about">
+            <h2>Get to Know Me</h2>
+            <div class="special-image" data-text="Hey there &#128075;">
+            <img src="images/headshot.jpg" alt="Headshot of author Leslie Hurtado" >
+            </div>
+            <p></p>
+        </section>
+        <section id="work">
+            <h2>Featured Works</h2>
+        </section>
+        <section id="experience">
+            <h2>Work Experience</h2>
+        </section>
+        <section id="contact">
+            <h2>Let's Work Together</h2>
+        </section>
+    </main>
+    <footer>
+        Leslie Hurtado &copy; <span id="year"></span>
+    </footer>
+    <script>
+        window.addEventListener("DOMContentLoaded", ()=>{
+            let fullDate = new Date();
+            let year = fullDate.getFullYear();
+            const currentYear = document.getElementById("year");
+            currentYear.textContent = year;
+        })
+    </script>
+</body>
+</html>
