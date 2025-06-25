@@ -1,0 +1,73 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leslie Hurtado | Portfolio</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Leslie Hurtado Portfolio</h1>
+        <nav>
+            <ul class="links">
+                <li><a href="work.html">work</a></li>
+                <li><a href="resume.html">resume</a></li>
+                <li><a href="about.html">about</a></li>
+                <li><button id="theme">✹</button></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        
+        
+        <section id="landing">
+            <h1>
+                <span class="italic">Hi, I'm Leslie :)</span>
+            </h1>
+            <img src="images/headshot.jpg" alt="headshot portrait of author Leslie A. Hurtado" class="rounded-corner">
+            <h2>Virtual designer based in the RGV.</h2>
+            <div class="text">
+                <h2 class="subheader mono accent">Header</h2>
+                <p>web developer</p>
+            </div>
+            <h4>hire me</h4>
+        </section>
+        <section>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo nobis maxime natus minima quibusdam voluptates, eaque non, voluptate placeat cumque laboriosam. Doloremque, corporis perferendis beatae dolores tempora nam inventore! Maxime.</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo nobis maxime natus minima quibusdam voluptates, eaque non, voluptate placeat cumque laboriosam. Doloremque, corporis perferendis beatae dolores tempora nam inventore! Maxime.</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo nobis maxime natus minima quibusdam voluptates, eaque non, voluptate placeat cumque laboriosam. Doloremque, corporis perferendis beatae dolores tempora nam inventore! Maxime.</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo nobis maxime natus minima quibusdam voluptates, eaque non, voluptate placeat cumque laboriosam. Doloremque, corporis perferendis beatae dolores tempora nam inventore! Maxime.</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo nobis maxime natus minima quibusdam voluptates, eaque non, voluptate placeat cumque laboriosam. Doloremque, corporis perferendis beatae dolores tempora nam inventore! Maxime.</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo nobis maxime natus minima quibusdam voluptates, eaque non, voluptate placeat cumque laboriosam. Doloremque, corporis perferendis beatae dolores tempora nam inventore! Maxime.</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo nobis maxime natus minima quibusdam voluptates, eaque non, voluptate placeat cumque laboriosam. Doloremque, corporis perferendis beatae dolores tempora nam inventore! Maxime.</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo nobis maxime natus minima quibusdam voluptates, eaque non, voluptate placeat cumque laboriosam. Doloremque, corporis perferendis beatae dolores tempora nam inventore! Maxime.</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo nobis maxime natus minima quibusdam voluptates, eaque non, voluptate placeat cumque laboriosam. Doloremque, corporis perferendis beatae dolores tempora nam inventore! Maxime.</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo nobis maxime natus minima quibusdam voluptates, eaque non, voluptate placeat cumque laboriosam. Doloremque, corporis perferendis beatae dolores tempora nam inventore! Maxime.</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo nobis maxime natus minima quibusdam voluptates, eaque non, voluptate placeat cumque laboriosam. Doloremque, corporis perferendis beatae dolores tempora nam inventore! Maxime.</p>
+        </section>
+    </main>
+    <footer>
+        <ul class="mono upper links block-space">
+            <li><a href="work.html">work</a></li>
+            <li><a href="github.com/lahg1103">github</a></li>
+            <li><a href="linkedin.com/in/lesliehurtado1103">linkedin</a></li>
+        </ul>
+        <img src="images/memoji.png" alt="" class="memoji block-space">
+        <h2 class="block-space">Say Hello &mdash; <a href="mailto:a.lesliehurtado@gmail.com">a.lesliehurtado@gmail.com</a></h2>
+        <p class="copy block-space"> &copy; Leslie Hurtado <span id="year">20</span></p>
+    </footer>
+    <script>
+        window.addEventListener("DOMContentLoaded", ()=> {
+            let currentYear = new Date().getFullYear();
+            let footerYear = document.getElementById("year");
+            footerYear.innerText = currentYear;
+            let theme = document.getElementById("theme");
+            theme.addEventListener("click", ()=> {
+                theme.innerText = theme.innerText === "✹" ? "⏾" : "✹";
+            });
+            
+        })
+    </script>
+</body>
+</html>

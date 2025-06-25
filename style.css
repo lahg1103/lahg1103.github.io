@@ -1,0 +1,151 @@
+/* design by Leslie A. Hurtado */
+/* typography */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sono:wght@200..800&display=swap');
+/* root */
+:root {
+    font-size : 16px;
+    --noir : #060d0c;
+    --blanc : #F0EDE5;
+    --matcha : #375a17;
+    --headerGradientLight: linear-gradient(90deg,rgba(240, 237, 229, 1) 10%, rgba(240, 237, 229, 0.5) 50%, rgba(240, 237, 229, 1) 90%);
+    --headerGradientDark: linear-gradient(90deg,rgba(6, 13, 12, 1) 10%, rgba(6, 13, 12, 0.5) 50%, rgba(6, 13, 12, 1) 90%);
+}
+
+/* generic */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+}
+html {
+    background-color: var(--blanc);
+}
+body {
+    position: relative;
+    font-family: 'inter', serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--noir);
+    text-rendering: optimizeLegibility;
+    
+}
+h1, h2, h3, h4 {
+    display: inline-flex;
+    font-family: 'Libre Caslon Text', sans-serif;
+}
+h1 {
+    font-size: 2rem;
+}
+button {
+    cursor: pointer;
+}
+header h1 {
+    font-size: clamp(16px, 3rem, 24px);
+}
+
+
+/* classes */
+.italic {
+    font-family: 'Libre Caslon Text', serif;
+    font-style: italic;
+}
+.italic-left {
+    display: inline-flex;
+    transform: skew(20deg);
+    margin-inline: -2.5rem 0em;
+}
+.subheader {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.mono {
+    font-family: 'Sono', monospace;
+    font-weight: 500;
+}
+.accent {
+    color: var(--matcha);
+}
+.upper { 
+    text-transform: uppercase;
+}
+.memoji {
+    width: 35%;
+}
+.links {
+    display: inline-flex;
+    gap: 1rem;
+}
+.block-space {
+    margin-block: 1rem;
+}
+.landing {
+    position: relative;
+    width: 100%;
+}
+.hero {
+    font-size: calc(clamp(130px, 39vw, 415px) - 0.5rem);
+}
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.rounded-corner {
+    border-radius: 12%;
+}
+.card {
+    border-radius: 6%;
+}
+
+/* work */
+#work .landing, #work header {
+    color: var(--blanc);
+}
+.subpage {
+    background-color: var(--noir);
+}
+.subpage main {
+    background-color: var(--blanc);
+}
+.subpage header {
+    background: var(--headerGradientDark);
+    justify-content: flex-end;
+}
+#work .landing {
+    background-color: var(--noir);
+    padding-block: 3rem;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* layout */
+header {
+    padding: 0.5rem;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    position: sticky;
+    top: 0;
+    background: var(--headerGradientLight);
+    z-index: 999;
+}
+
+
+#landing {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: 1fr 2fr 1fr;
+    width: 100%;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
