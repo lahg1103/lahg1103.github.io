@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap');
+:root {
+    --charcoalBlack: #202221;
+    --cherryBlossom: #C25968;
+    --beigeMist: #f9f9f9;
+    --dustly: #f1f2e0;
+    --gradientDark: linear-gradient(#020200, #0d0d0c, #020202);
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: var(--beigeMist);
+    color: var(--dustly);
+    font-family: 'libre caslon text', serif;
+    font-weight: 400;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+    font-size: 1.12rem;
+    background: var(--gradientDark);
+
+    display: grid;
+    grid-template-columns: 2.5rem 3fr;
+    grid-template-rows: 1fr 3fr 1fr;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 15px;
+    padding-block: 1rem;
+    grid-column: span 2;
+    grid-row: 1;
+    height: 3rem;
+}
+aside {
+    grid-column: 1;
+    grid-row: 2;
+
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+main {
+    padding-inline: 1rem;
+    grid-column: 2;
+    grid-row: 2;
+}
+footer {
+    grid-column: span 2;
+    grid-row: 3;
+}
+.sans-serif {
+    font-family: 'bricolage grotesque', sans-serif;
+}
+h1 {
+    font-family: 'libre caslon display', serif;
+    font-weight: 400;
+}
+header h1 {
+    font-size: 1.12rem;
+}
+a, :active, a:visited {
+    color: inherit;
+    text-decoration: none;
+}
+button:hover {
+    cursor: pointer;
+}
+img {
+    max-width: 100%;
+}
+ul ::marker {
+    color: transparent;
+}
+hr {
+    border: none;
+    border-bottom: 1px solid var(--dustly);
+}
+.section-list li {
+    border-bottom: solid 1px var(--dustly);
+}
+.vertical-line {
+    background-color: var(--dustly);
+    height: 100%;
+    width: 1px;
+    margin-inline: auto;
+}
+/* spacing */
+section {
+    padding-bottom: 40px;
+}
+#menu {
+    height: 1rem;
+    width: 1.5rem;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+#menu span {
+    background-color: var(--dustly);
+    width: 90%;
+    height: 0.12rem;
+}
+#theme {
+    display: grid;
+    grid-template-rows: 2 1fr;
+    grid-template-columns: 1 1fr;
+    height: 1.5rem;
+    width: 1.5rem;
+    background-color: transparent;
+    border: none;
+    color: var(--dustly);
+    font-size: 1.5rem;
+    margin-inline: auto;
+}
