@@ -1,14 +1,13 @@
 /* design by Leslie A. Hurtado */
 /* typography */
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Sono:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 /* root */
 :root {
-    font-size : 16px;
-    --noir : #060d0c;
-    --blanc : #F0EDE5;
-    --matcha : #375a17;
+    font-size : 14px;
+    --noir : rgb(6, 13, 12);
+    --blanc : rgb(240, 237, 229);
+    --matcha : rgb(55, 90, 23);
+    --matchaLatte : radial-gradient(rgba(108, 190, 115, 1) 0%, rgba(198, 220, 155, 1) 33%, rgba(240, 237, 229, 0) 100%);
     --headerGradientLight: linear-gradient(90deg,rgba(240, 237, 229, 1) 10%, rgba(240, 237, 229, 0.5) 50%, rgba(240, 237, 229, 1) 90%);
     --headerGradientDark: linear-gradient(90deg,rgba(6, 13, 12, 1) 10%, rgba(6, 13, 12, 0.5) 50%, rgba(6, 13, 12, 1) 90%);
 }
@@ -22,20 +21,33 @@ html {
     background-color: var(--blanc);
 }
 body {
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
     position: relative;
-    font-family: 'inter', serif;
+    font-family: 'eb garamond', serif;
     font-weight: 400;
     font-style: normal;
     color: var(--noir);
     text-rendering: optimizeLegibility;
+    line-height: 1.16;
     
 }
 h1, h2, h3, h4 {
     display: inline-flex;
-    font-family: 'Libre Caslon Text', sans-serif;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: -0.25;
+    font-weight: 500;
 }
-h1 {
-    font-size: 2rem;
+h1:not(header h1) {
+    font-size: 1.75rem;
+    margin-bottom: 1em;
+}
+h2, h3, h4 {
+    margin-bottom: 0.75em;
+}
+p {
+    margin-bottom: 0.5em;
 }
 button {
     cursor: pointer;
@@ -47,21 +59,30 @@ header h1 {
 
 /* classes */
 .italic {
-    font-family: 'Libre Caslon Text', serif;
+    font-family: 'eb garamond', serif;
     font-style: italic;
 }
 .italic-left {
     display: inline-flex;
     transform: skew(20deg);
-    margin-inline: -2.5rem 0em;
+    margin-inline: -2.5rem 1rem;
 }
 .subheader {
-    font-size: 1.5rem;
-    font-weight: 600;
+    font-family: 'Hanken Grotesk', monospace;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    font-weight: 400;
+    letter-spacing: 0.5;
+}
+.serif {
+    font-family: 'eb garamond', serif;
+    font-weight: 500;
+    letter-spacing: 0;
 }
 .mono {
-    font-family: 'Sono', monospace;
+    font-family: 'Hanken Grotesk', monospace;
     font-weight: 500;
+    letter-spacing: 0.5;
 }
 .accent {
     color: var(--matcha);
@@ -75,6 +96,9 @@ header h1 {
 .links {
     display: inline-flex;
     gap: 1rem;
+}
+header .links {
+    font-size: clamp(16px, 3rem, 24px);
 }
 .block-space {
     margin-block: 1rem;
@@ -93,10 +117,13 @@ header h1 {
     align-items: center;
 }
 .rounded-corner {
-    border-radius: 12%;
+    border-radius: 2rem;
 }
 .card {
-    border-radius: 6%;
+    border-radius: 1rem;
+}
+.underline {
+    text-decoration: underline;
 }
 
 /* work */
@@ -111,13 +138,29 @@ header h1 {
 }
 .subpage header {
     background: var(--headerGradientDark);
-    justify-content: flex-end;
+    justify-content: space-between;
 }
 #work .landing {
     background-color: var(--noir);
     padding-block: 3rem;
     display: flex;
     justify-content: center;
+}
+#work .landing h1 {
+    font-family: 'eb garamond', serif;
+    font-weight: 900;
+    transform: scaleY(1.25);
+    cursor: default;
+    user-select: none;
+}
+.hero .italic-left:hover {
+    transition: 800ms ease-in-out;
+    transform: skew(0deg);
+    margin-inline: -2rem 0;
+}
+.hero .italic-left:not(:hover) {
+    transition: 800ms ease-in-out;
+    transform: skew(30deg);
 }
 
 
@@ -137,10 +180,29 @@ header {
 
 
 #landing {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    grid-template-rows: 1fr 2fr 1fr;
+    position: relative;
+    display: flex;
+    text-align: center;
     width: 100%;
+    padding-block: 5rem;
+    padding-inline: 1rem;
+    gap: 1em;
+}
+#landing img {
+    max-width: 55%;
+}
+#landing::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    background-image: var(--matchaLatte);
+    background-repeat: no-repeat;
+    background-position: 10% 10%;
+    background-size: min(100%, 100vw) min(100%, 100vw);
+    filter: blur(30px);
+    z-index: -1;
 }
 
 footer {
