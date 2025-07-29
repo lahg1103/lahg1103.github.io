@@ -12,6 +12,28 @@
     --headerGradientDark: linear-gradient(90deg,rgba(6, 13, 12, 1) 10%, rgba(6, 13, 12, 0.5) 50%, rgba(6, 13, 12, 1) 90%);
 }
 
+/* animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes staggerFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* generic */
 *, *::before, *::after {
     margin: 0;
@@ -124,6 +146,17 @@ header .links {
 }
 .underline {
     text-decoration: underline;
+}
+.fade-in {
+    animation: fadeIn 800ms ease-out forwards;
+}
+.stagger-fade-in >* {
+    opacity: 0;
+    animation-name: staggerFadeIn;
+    animation-duration: 800ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.75, -0.015, 0.565, 1.055);
+    animation-delay: calc(0.45s * var(--i));
 }
 
 /* work */
