@@ -220,6 +220,7 @@ header {
     padding-block: 5rem;
     padding-inline: 1rem;
     gap: 1em;
+    align-items: center;
 }
 #landing img {
     max-width: 55%;
