@@ -53,7 +53,7 @@ body {
     color: var(--noir);
     text-rendering: optimizeLegibility;
     line-height: 1.16;
-    
+    overflow-x: hidden;
 }
 h1, h2, h3, h4 {
     display: inline-flex;
@@ -130,13 +130,19 @@ header .links {
     width: 100%;
 }
 .hero {
-    font-size: calc(clamp(130px, 39vw, 415px) - 0.5rem);
+    font-size: clamp(80px, 28vw, 407px);
 }
 .hero-text {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+.hero.contact .italic-left {
+    margin-inline: -0.75rem 0.75rem;
+}
+.hero.contact .italic-left:hover {
+    margin-inline: 0rem;
 }
 .rounded-corner {
     border-radius: 2rem;
@@ -165,6 +171,7 @@ header .links {
 }
 .subpage {
     background-color: var(--noir);
+    color: var(--blanc);
 }
 .subpage main {
     background-color: var(--blanc);
