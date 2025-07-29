@@ -109,6 +109,12 @@ header h1 {
 .accent {
     color: var(--matcha);
 }
+.dark {
+    color: var(--noir);
+}
+.center {
+    text-align: center;
+}
 .upper { 
     text-transform: uppercase;
 }
@@ -201,6 +207,18 @@ header .links {
 .hero .italic-left:not(:hover) {
     transition: 800ms ease-in-out;
     transform: skew(30deg);
+}
+/* contact */
+#contact {
+    padding: 3rem 1.15rem;
+}
+.contact-card {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    border: 1px solid var(--noir);
+    padding: 1rem;
 }
 
 
