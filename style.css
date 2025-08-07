@@ -33,6 +33,16 @@
         transform: translateY(0);
     }
 }
+@keyframes bounce {
+
+    from {
+        transform: translateY(25%);
+    }
+
+    to {
+        transform: translateY(-25%);
+    }
+}
 
 /* generic */
 *, *::before, *::after {
@@ -77,7 +87,12 @@ button {
 header h1 {
     font-size: clamp(16px, 3rem, 24px);
 }
-
+#home main {
+    padding-inline: clamp(0.15rem, 3rem, 5rem);
+}
+#home section {
+    margin-block: 3.5rem;
+}
 
 /* classes */
 .italic {
@@ -171,8 +186,22 @@ header .links {
     animation-delay: calc(0.45s * var(--i));
 }
 
+.bounce:hover {
+    animation: 400ms linear 200ms infinite alternate bounce;
+}
+.divider {
+    height: 2px;
+    width: 100%;
+    background-color: var(--noir);
+    margin-block: -1rem 0.75em;
+}
+.featured-works ul li {
+    padding-block: 0.75em;
+    border-bottom: 1px solid var(--noir);
+}
+
 /* work */
-#work .landing, #work header {
+.subpage .landing, .subpage header {
     color: var(--blanc);
 }
 .subpage {
@@ -181,18 +210,19 @@ header .links {
 }
 .subpage main {
     background-color: var(--blanc);
+    color: var(--noir);
 }
 .subpage header {
     background: var(--headerGradientDark);
     justify-content: space-between;
 }
-#work .landing {
+.subpage .landing {
     background-color: var(--noir);
-    padding-block: 3rem;
+    padding: 3rem 1.15rem;
     display: flex;
     justify-content: center;
 }
-#work .landing h1 {
+.subpage .landing h1 {
     font-family: 'eb garamond', serif;
     font-weight: 900;
     transform: scaleY(1.25);
@@ -200,18 +230,19 @@ header .links {
     user-select: none;
 }
 .hero .italic-left:hover {
-    transition: 800ms ease-in-out;
+    transition: 500ms ease-in-out;
     transform: skew(0deg);
     margin-inline: -2rem 0;
 }
 .hero .italic-left:not(:hover) {
-    transition: 800ms ease-in-out;
+    transition: 500ms ease-in-out;
     transform: skew(30deg);
 }
-/* contact */
-#contact {
-    padding: 3rem 1.15rem;
+.subpage main section:not(:first-child) {
+    padding-inline: clamp(0.15rem, 3rem, 5rem);
+    margin: 3rem 0.15rem;
 }
+/* contact */
 .contact-card {
     display: flex;
     flex-direction: column;
@@ -219,6 +250,7 @@ header .links {
     align-items: center;
     border: 1px solid var(--noir);
     padding: 1rem;
+    margin: 3rem 1.15rem;
 }
 
 
@@ -269,4 +301,11 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+
+@media screen and (width >= 600px) {
+    :root {
+        font-size : 24px;
+    }
 }
