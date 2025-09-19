@@ -14,7 +14,7 @@
                 <li><a href="work.html">work</a></li>
                 <li><a href="about.html">about</a></li>
                 <li><a href="contact.html">contact</a></li>
-                <li><button id="theme">✹</button></li>
+                <li class="theme"><button id="theme" class="hover-spin">✹</button></li>
             </ul>
         </nav>
     </header>
@@ -25,12 +25,12 @@
             <div class="text-container stagger-fade-in">
                 <h1 style="--i: 0" class="serif">Hey there, I'm Leslie. </h1>
                 <h2 style="--i: 1">&mdash; virtual designer & web developer based in the Rio Grande Valley.</h2>
-                <p style="--i: 2"><a href="#down">scroll</a></p>
+                <p style="--i: 2"><a href="#main">scroll</a></p>
             </div>
             <img src="images/headshot.jpg" alt="headshot of Leslie Hurtado" class="rounded-corner">
         </section>
-        <section>
-           
+        <section id="main">
+            
         </section>
     </main>
     <footer>
@@ -52,6 +52,7 @@
             let theme = document.getElementById("theme");
             theme.addEventListener("click", ()=> {
                 theme.innerText = theme.innerText === "✹" ? "⏾" : "✹";
+                theme.classList.toggle("night");
             });
             
         })
