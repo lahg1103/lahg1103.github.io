@@ -63,6 +63,7 @@ html {
     scroll-behavior: smooth;
 }
 body {
+    font-size: 1rem;
     display: flex;
     flex-direction: column;
     gap: 3.5rem;
@@ -83,7 +84,7 @@ h1, h2, h3, h4 {
 }
 h1:not(header h1) {
     font-size: 1.75rem;
-    margin-bottom: 1em;
+    margin-bottom: 1rem;
 }
 h2, h3, h4 {
     margin-bottom: 0.75em;
@@ -112,7 +113,7 @@ header h1 {
 .italic-left {
     display: inline-flex;
     transform: skew(20deg);
-    margin-inline: -2.5rem 1rem;
+    margin-inline: -2rem 1rem;
 }
 .subheader {
     font-family: 'Hanken Grotesk', monospace;
@@ -162,7 +163,7 @@ header .links {
     max-height: 60vh;
 }
 .hero {
-    font-size: clamp(80px, 28vw, 407px);
+    font-size: clamp(8rem, 28vmin, 407px);
 }
 .hero-text {
     display: flex;
@@ -256,17 +257,18 @@ header .links {
     cursor: default;
     user-select: none;
 }
+
 .hero .italic-left:hover {
     transition: 500ms ease-in-out;
     transform: skew(0deg);
-    margin-inline: -2rem 0;
+    margin-inline: -1rem 0;
 }
 .hero .italic-left:not(:hover) {
     transition: 500ms ease-in-out;
     transform: skew(30deg);
 }
 .subpage main section:not(:first-child) {
-    padding-inline: clamp(0.15rem, 3rem, 5rem);
+    padding-inline: clamp(0.15rem, 8vw, 5rem);
     margin: 3rem 0.15rem;
 }
 /* contact */
