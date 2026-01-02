@@ -2,74 +2,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leslie Hurtado | Portfolio</title>
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
 </head>
-<body id="home">
-    <header>
-        <h1><a href="index.html">Leslie Hurtado</a></h1>
+<body>
+    <header id="top" class="padding-inline padding-block">
+        <h1 class="name-title">Leslie Hurtado</h1>
+        <h4 class="sans-serif">Virtual Designer & Web Developer</h4>
+        <p></p>
         <nav>
-            <ul class="links">
-                <li><a href="work.html">work</a></li>
-                <li><a href="about.html">about</a></li>
-                <li><a href="contact.html">contact</a></li>
-                <li class="theme"><button id="theme" class="hover-spin">✹</button></li>
+            <ul class="flex gap padding-block">
+                <li>
+                    <a href="">
+                        home
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        about
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        resume
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        contact
+                    </a>
+                </li>
+            </ul>
+            <ul class="icons flex gap padding-block">
+                <li>
+                    <a href="https://linkedin.com/in/lesliehurtado1103"><img src="images/linkedin.svg" alt="LinkedIn Logo"></a>
+                </li>
+                <li>
+                    <a href="https://github.com/lahg1103"><img src="images/git.svg" alt="GitHub Logo"></a>
+                </li>
+                <li>
+                    <a href=""><img src="" alt=""></a>
+                </li>
             </ul>
         </nav>
     </header>
-    <main>
-        <section id="landing">
-            <div class="text-container stagger-fade-in">
-                <h1 style="--i: 0" class="serif">Hey there, I'm Leslie. </h1>
-                <h2 style="--i: 1">&mdash; virtual designer & web developer based in the Rio Grande Valley.</h2>
-                <p style="--i: 2"><a href="#main"><img src="images/arrow.svg" alt="arrow" class="bounce arrow"></a></p>
+    <aside class="overflow-clip">
+        <p class="helper-header">202x</p>
+        <div class="line"></div>
+    </aside>
+    <main class="padding-inline">
+        <h1>Featured Works</h1>
+        <article data-year="2025" class="project">
+            <h1>Voyage Travel Itinerary Generator</h1>
+            <p class="description"></p>
+            <ul class="links">
+                <li>
+                    <strong>Live</strong>
+                    <span><a href="https://voyageproject.app">Voyage</a></span>
+                </li>
+                <li>
+                    <strong>Git</strong>
+                    <span><a href="https://github.com/lahg1103/SeniorProject">Voyage Repository</a></span>
+                </li>
+            </ul>
+            <div class="img-frame">
+                <img src="" alt="">
             </div>
-            <img src="images/headshot.jpg" alt="headshot of Leslie Hurtado" class="rounded-corner">
-        </section>
-        <section id="main">
-            <section class="featured-works subsection">
-                <h1>Featured Works</h1>
-                <hr class="divider">
-                <ul>
-                    <li class="project-card">
-                        <h2>Office for Sustainability Homepage Redesign</h2>
-                    </li>
-                    <li class="project-card">
-                        <h2>Taqueria Aztlan </h2>
-                    </li>
-                    <li class="project-card">
-                        <h2>placeholder</h2>
-                    </li>
-                    <li class="project-card">
-                        <h2>placeholder</h2>
-                    </li>
-                </ul>
-            </section>
-        </section>
+
+        </article>
     </main>
     <footer>
-        <ul class="mono upper links block-space">
-            <li><a href="work.html">work</a></li>
-            <li><a href="github.com/lahg1103">github</a></li>
-            <li><a href="linkedin.com/in/lesliehurtado1103">linkedin</a></li>
-            <li><a href="resume.html">resume</a></li>
+        <p class="back-to-top"><a href="#top">&ShortUpArrow; Back to Top</a></p>
+        <ul class="icons inline-flex gap padding-block">
+                <li>
+                    <a href="https://linkedin.com/in/lesliehurtado1103"><img src="images/linkedin.svg" alt="LinkedIn Logo"></a>
+                </li>
+                <li>
+                    <a href="https://github.com/lahg1103"><img src="images/git.svg" alt="GitHub Logo"></a>
+                </li>
+                <li>
+                    <a href=""><img src="" alt=""></a>
+                </li>
         </ul>
-        <p class="block-space">Say Hello &mdash; <a href="mailto:a.lesliehurtado@gmail.com" class="underline">a.lesliehurtado@gmail.com</a></p>
-        <img src="images/memoji.png" alt="" class="memoji block-space">
-        <p class="copy block-space"> &copy; Leslie Hurtado <span id="year">20</span></p>
+        <p>Say Hello &mdash; <a href="mailto:a.lesliehurtado@gmail.com">a.lesliehurtado@gmail.com</a></p>
+        <div class="padding-block">
+            <img src="images/memoji.png" alt="memoji of Leslie Hurtado with the peace sign, smiling" class="memoji">
+        </div>
+        <p class="copyright">&copy; <span class="year"></span></p>
     </footer>
     <script>
         window.addEventListener("DOMContentLoaded", ()=> {
-            let currentYear = new Date().getFullYear();
-            let footerYear = document.getElementById("year");
-            footerYear.innerText = currentYear;
-            let theme = document.getElementById("theme");
-            theme.addEventListener("click", ()=> {
-                theme.innerText = theme.innerText === "✹" ? "⏾" : "✹";
-                theme.classList.toggle("night");
-            });
-            
+            let todayFull = new Date();
+            let year = todayFull.getFullYear();
+            let placeholder = document.getElementsByClassName("year");
+            Array.from(placeholder).forEach((y) =>{
+                y.textContent = year;
+            })
         })
     </script>
 </body>
