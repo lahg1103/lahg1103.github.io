@@ -95,9 +95,6 @@ p {
 button {
     cursor: pointer;
 }
-header h1 {
-    font-size: clamp(16px, 6vw, 24px);
-}
 #home main {
     padding-inline: clamp(0.15rem, 5vw, 5rem);
 }
@@ -150,9 +147,6 @@ header h1 {
 .links {
     display: inline-flex;
     gap: 1rem;
-}
-header .links {
-    font-size: clamp(16px, 6vw, 24px);
 }
 .block-space {
     margin-block: 1rem;
@@ -228,6 +222,10 @@ header .links {
     border-bottom: 1px solid var(--noir);
 }
 
+.default-cursor {
+    cursor: default;
+}
+
 /* work */
 .subpage .landing, .subpage header {
     color: var(--blanc);
@@ -291,10 +289,9 @@ header {
     justify-content: space-between;
     align-items: center;
     backdrop-filter: blur(5px);
-    position: sticky;
-    top: 0;
     background: var(--headerGradientLight);
     z-index: 999;
+    font-size: clamp(16px, 4.55vw, 24px);
 }
 section {
     padding-block: 1rem;
@@ -309,7 +306,7 @@ section {
     padding-inline: 1rem;
     gap: 1rem;
     align-items: center;
-    max-height: 100vh;
+    max-height: 35vh;
 }
 #landing img {
     max-height: 50vh;
@@ -354,5 +351,10 @@ footer {
 @media screen and (width >= 600px) {
     :root {
         font-size : 24px;
+    }
+    header {
+        position: sticky;
+        top: 0;
+        font-size: clamp(16px, 6vw, 24px);
     }
 }
